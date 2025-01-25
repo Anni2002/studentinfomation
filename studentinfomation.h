@@ -10,6 +10,9 @@
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
 #include <QStringListModel>
+#include <QStandardItemModel>
+#include <QVBoxLayout>
+#include <QSqlQueryModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,6 +29,8 @@ public:
     ~StudentInfomation();
 
 private slots:
+    void InitDatabase();
+
     void on_insertbutton_clicked();
 
     void on_changebutton_clicked();
@@ -35,6 +40,10 @@ private slots:
     void on_deletebutton_clicked();
 
     void on_clearbutton_clicked();
+
+    void Add(const int studentid,const QString studentname,const int studentgrades);
+
+    void Update(const int studentid,const QString studentname,const int studentgrades);
 
 private:
     Ui::StudentInfomation *ui;
