@@ -144,16 +144,6 @@
     <string>删除</string>
    </property>
   </widget>
-  <widget class="QListView" name="studentsinfolist">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>270</y>
-     <width>581</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="clearbutton">
    <property name="geometry">
     <rect>
@@ -165,6 +155,16 @@
    </property>
    <property name="text">
     <string>清空数据</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tablelist">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>310</y>
+     <width>581</width>
+     <height>192</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -22,6 +22,9 @@ set(PROJECT_SOURCES
         studentinfomation.cpp
         studentinfomation.h
         studentinfomation.ui
+
+
+
 )
 
 # 判断Qt版本并添加可执行文件
@@ -29,6 +32,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(map_study
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        studentlist.h studentlist.cpp studentlist.ui
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET map_study APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -30,6 +30,7 @@ public:
 
 private slots:
     void InitDatabase();
+    void InitTableList();
 
     void on_insertbutton_clicked();
 

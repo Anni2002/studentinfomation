@@ -15,17 +15,6 @@ StudentInfomation::StudentInfomation(QWidget *parent)
 
     InitDatabase();
 
-    // 创建主窗口和布局
-    QWidget window;
-    QVBoxLayout layout(&window);
-
-    // 创建 QListView 和 QSqlQueryModel
-    QSqlQueryModel model;
-
-    // 初始化模型并显示初始数据
-    // Update(&model);
-    model.setQuery("SELECT id, name, age FROM users");
-    ui->studentsinfolist->setModel(&model);
 
 }
 
@@ -68,6 +57,15 @@ void StudentInfomation::InitDatabase()
     {
         qDebug()<<"创建表成功！";
     }
+}
+
+void StudentInfomation::InitTableList()
+{
+    ui->tablelist->setColumnCount(4);
+    ui->tablelist->setHorizontalHeaderLabels(QStringList()<<"id"<<"学号"<<"姓名"<<"成绩");
+    QVBoxLayout *layout=new QVBoxLayout(this);
+    layout->addWidget(ui->tablelist);
+    setLayout(layout);
 }
 
 void StudentInfomation::on_insertbutton_clicked()//添加
