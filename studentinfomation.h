@@ -42,7 +42,8 @@ private slots:
 
     void on_clearbutton_clicked();
 
-    void Add(const int studentid,const QString studentname,const int studentgrades);
+    void Add(const int studentid,const QString studentname,const int studentgrades);//添加至数据库
+    void AddRow();//添加至列表后显示
 
     void Update(const int studentid,const QString studentname,const int studentgrades);
 

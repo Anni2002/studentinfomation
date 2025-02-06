@@ -82,8 +82,11 @@ void StudentInfomation::on_insertbutton_clicked()//添加
     qDebug()<<"name:"<<name;
     qDebug()<<"grades:"<<grades;
 
+    //添加数据
     Add(studentid,name,grades);
 
+
+    //添加数据后删除数据框内文本
     ui->name->setText("");
     ui->id->setText(0);
     ui->grades->setText(0);
@@ -192,7 +195,13 @@ void StudentInfomation::Add(const int studentid, const QString studentname, cons
     }
 }
 
+void StudentInfomation::AddRow()
+{
+
+}
+
 void StudentInfomation::Update(const int studentid, const QString studentname, const int studentgrades)
 {
+
 }
 
